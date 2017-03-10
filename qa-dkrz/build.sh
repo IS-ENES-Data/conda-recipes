@@ -29,10 +29,10 @@ touch ${QA_HOME}/.ignore_GitHub # avoids git update!
 #export QA_PATH="$PWD"
 touch .ignore_GitHub # avoids git update!
 export QA_LIBS="-ludunits2 -lnetcdf -lhdf5_hl -lhdf5 -lz -luuid -lmfhdf -ldf -ljpeg -lssl -lcrypto"
-./install --qa-home="$PWD" CF
-./install --qa-home="$PWD" CORDEX
-./install --qa-home="$PWD" CMIP5
-./install --qa-home="$PWD" --conda-build CMIP6
+./install --net=f --qa-home="$QA_HOME" CF
+./install --net=f --qa-home="$QA_HOME" CORDEX
+./install --net=f --qa-home="$QA_HOME" CMIP5
+./install --net=f --qa-home="$QA_HOME" CMIP6
 
 # copy generated files to opt/qa-dkrz
 cp -r ./bin ${QA_HOME}
